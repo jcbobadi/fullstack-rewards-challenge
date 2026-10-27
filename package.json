@@ -1,0 +1,17 @@
+{
+  "name": "fullstack-rewards-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prueba técnica Fullstack: catálogo, carrito y recompensas",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "test": "npm test -w backend",
+    "build": "npm run build -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
